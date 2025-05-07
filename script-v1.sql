@@ -14,10 +14,10 @@ CREATE TABLE empleados (
 
 CREATE TABLE registros (
     id_registro INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
-    fecha TIMESTAMP, registrosuserschecadorusers
-    id_empleado INT,
+    fecha TIMESTAMP,
+    id_usuario INT,
     id_checador INT,
-    FOREIGN KEY (id_empleado) REFERENCES empleados(id_usuario),
+    FOREIGN KEY (id_usuario) REFERENCES empleados(id_usuario),
     FOREIGN KEY (id_checador) REFERENCES checador(id_checador)
 );
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `administradores` (
 );
 
 CREATE TABLE IF NOT EXISTS `catorcenas` (
-	`id_catorcena` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`id_catorcena` varchar(10) NOT NULL UNIQUE,
 	`numero` int NOT NULL,
 	`fecha_inicio` date NOT NULL,
 	`fecha_fin` date NOT NULL,
